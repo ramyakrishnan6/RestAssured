@@ -24,4 +24,18 @@ public class Comget {
 		int expectedcode = 200;
 		Assert.assertEquals(expectedcode, actualcode);
 	}
+	@Test
+	public void GetRequest2() {
+		// given , when, then
+
+		given()
+			.baseUri("https://reqres.in")
+
+		.when()
+			.get("/api/users/2")
+		.then()
+			.statusCode(200);
+
+	}
+
 }
